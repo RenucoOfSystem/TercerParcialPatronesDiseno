@@ -9,12 +9,18 @@ public class CuadraElectricaAdaptada implements ICuadraNormal{
 
     @Override
     public void llenarGasolina(int cantidad) {
-        if(cantidad<=50)
-        System.out.println("Cargando combustible");
+        if(cantidad<=50){
+            System.out.println("Cargando combustible: " + cantidad);
+            this.cuadraElectrica.setBateria(cantidad);
+        }
+        else {
+            System.out.println("Monto excedido");
+        }
+
     }
 
     @Override
     public int estadoCombustible() {
-        return 0;
+        return (int)Math.floor(Math.random()*(50-1+1)+1);
     }
 }
