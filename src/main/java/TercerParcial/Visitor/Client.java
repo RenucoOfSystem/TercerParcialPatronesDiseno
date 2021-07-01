@@ -10,5 +10,9 @@ public class Client {
         laPaz.accept(turista);
         cochabamba.accept(turista);
         santaCruz.accept(turista);
+
+        System.out.println("Total ganado LaPaz: "+laPaz.getDineroPorTurismo());
+        System.out.println("Total ganado cocha: "+cochabamba.getDineroPorTurismo());
+        System.out.println("Total ganado santacruz: "+santaCruz.getDineroPorTurismo());
     }
 }
